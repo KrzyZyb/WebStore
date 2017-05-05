@@ -17,6 +17,7 @@ public class Product {
 	private boolean discontinued;
 	private String condition;
 	private MultipartFile productImage;
+	private MultipartFile productPdf;
 
 	public Product() {
 		super();
@@ -145,5 +146,13 @@ public class Product {
 
 	public void setProductImage(MultipartFile productImage) {
 		this.productImage = productImage;
+	}
+
+	public MultipartFile getProductPdf() {
+		return productPdf;
+	}
+
+	public void setProductPdf(MultipartFile productPdf) {
+		this.productPdf = productPdf;
 	}
 }

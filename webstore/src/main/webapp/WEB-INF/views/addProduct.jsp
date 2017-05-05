@@ -98,9 +98,19 @@
 				</div>
 
 				<div class="form-group">
-					<label class="control-label col-lg-2" for="productImage"> </label>
+					<label class="control-label col-lg-2" for="productImage"> <spring:message
+							code="addProducts.form.productImage.label" /></label>
 					<div class="col-lg-10">
 						<form:input id="productImage" path="productImage" type="file"
+							class="form:input-large" />
+					</div>
+				</div>
+				
+								<div class="form-group">
+					<label class="control-label col-lg-2" for="productPdf"> <spring:message
+							code="addProducts.form.productPdf.label" /></label>
+					<div class="col-lg-10">
+						<form:input id="productPdf" path="productPdf" type="file"
 							class="form:input-large" />
 					</div>
 				</div>
