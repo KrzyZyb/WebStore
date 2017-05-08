@@ -2,8 +2,13 @@ package com.packt.webstore.domain;
 
 import java.math.BigDecimal;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.springframework.web.multipart.MultipartFile;
 
+@XmlRootElement
 public class Product {
 
 	private String productId;
@@ -16,8 +21,8 @@ public class Product {
 	private long unitsInOrder;
 	private boolean discontinued;
 	private String condition;
-	private MultipartFile productImage;
-	private MultipartFile productPdf;
+	@JsonIgnore private MultipartFile productImage;
+	@JsonIgnore private MultipartFile productPdf;
 
 	public Product() {
 		super();
@@ -139,7 +144,7 @@ public class Product {
 	public String toString() {
 		return "Produkt [productId=" + productId + ", nazwa=" + name +"]";
 	}
-
+	@XmlTransient
 	public MultipartFile getProductImage() {
 		return productImage;
 	}
@@ -147,7 +152,7 @@ public class Product {
 	public void setProductImage(MultipartFile productImage) {
 		this.productImage = productImage;
 	}
-
+	@XmlTransient
 	public MultipartFile getProductPdf() {
 		return productPdf;
 	}
