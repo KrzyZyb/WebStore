@@ -22,7 +22,8 @@
 		</div>
 	</section>
 	<section class="container">
-		<form:form modelAttribute="newProduct" class="form-horizontal" enctype="multipart/form-data">
+		<form:form modelAttribute="newProduct" class="form-horizontal"
+			enctype="multipart/form-data">
 			<fieldset>
 				<legend>Dodaj nowy produkt</legend>
 
@@ -32,6 +33,7 @@
 					<div class="col-lg-10">
 						<form:input id="productId" path="productId" type="text"
 							class="form:input-large" />
+						<form:errors path="productId" cssClass="text-danger" />
 					</div>
 				</div>
 
@@ -105,8 +107,8 @@
 							class="form:input-large" />
 					</div>
 				</div>
-				
-								<div class="form-group">
+
+				<div class="form-group">
 					<label class="control-label col-lg-2" for="productPdf"> <spring:message
 							code="addProducts.form.productPdf.label" /></label>
 					<div class="col-lg-10">
@@ -123,6 +125,7 @@
 				</div>
 
 			</fieldset>
+			<form:errors path="*" cssClass="alert alert-danger" element="div"/>
 		</form:form>
 	</section>
 </body>
