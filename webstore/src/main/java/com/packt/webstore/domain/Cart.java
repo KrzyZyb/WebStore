@@ -15,11 +15,6 @@ public class Cart {
 		grandTotal = new BigDecimal(0);
 	}
 
-	public Cart(String cartId) {
-		this();
-		this.cartId = cartId;
-	}
-
 	public String getCartId() {
 		return cartId;
 	}
