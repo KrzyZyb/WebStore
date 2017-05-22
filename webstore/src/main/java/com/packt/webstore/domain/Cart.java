@@ -7,14 +7,19 @@ import java.util.Map;
 public class Cart {
 
 	private String cartId;
-	private Map<String, CartItem> cartItems;
+	private Map<String,CartItem> cartItems;
 	private BigDecimal grandTotal;
-
+	
 	public Cart() {
 		cartItems = new HashMap<String, CartItem>();
 		grandTotal = new BigDecimal(0);
 	}
-
+	
+	public Cart(String cartId) {
+		this();
+		this.cartId = cartId;
+	}
+	
 	public String getCartId() {
 		return cartId;
 	}
@@ -34,33 +39,33 @@ public class Cart {
 	public BigDecimal getGrandTotal() {
 		return grandTotal;
 	}
-
+	
 	public void addCartItem(CartItem item) {
 		String productId = item.getProduct().getProductId();
-
-		if (cartItems.containsKey(productId)) {
+		
+		if(cartItems.containsKey(productId)) {
 			CartItem existingCartItem = cartItems.get(productId);
-			existingCartItem.setQuantity(existingCartItem.getQuantity() + item.getQuantity());
+			existingCartItem.setQuantity(existingCartItem.getQuantity()+ item.getQuantity());
 			cartItems.put(productId, existingCartItem);
 		} else {
 			cartItems.put(productId, item);
 		}
 		updateGrandTotal();
 	}
-
+	
 	public void removeCartItem(CartItem item) {
 		String productId = item.getProduct().getProductId();
 		cartItems.remove(productId);
 		updateGrandTotal();
 	}
-
+	
 	public void updateGrandTotal() {
-		grandTotal = new BigDecimal(0);
-		for (CartItem item : cartItems.values()) {
+		grandTotal= new BigDecimal(0);
+		for(CartItem item : cartItems.values()){
 			grandTotal = grandTotal.add(item.getTotalPrice());
 		}
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 71;
