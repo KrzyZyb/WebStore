@@ -20,13 +20,13 @@ public class InMemoryProductRepository implements ProductRepository{
 	
 	public InMemoryProductRepository() {
 		Product iphone = new Product("P1234","iPhone 5s", new BigDecimal(500));
-	    iphone.setDescription("Apple iPhone 5s smartfon z 4-calowym ekranem o rozdzielczoœci 640×1136 i 8-megapikselowym aparatem");
+	    iphone.setDescription("Apple iPhone 5s, smartfon z 4-calowym ekranem o rozdzielczoœci 640×1136 i 8-megapikselowym aparatem");
 	    iphone.setCategory("smartfon");
 	    iphone.setManufacturer("Apple");
 	    iphone.setUnitsInStock(1000);
 
 	    Product laptop_dell = new Product("P1235","Dell Inspiron", new BigDecimal(700));
-	    laptop_dell.setDescription("Dell Inspiron 14-calowy laptop (czarny) z procesorami Intel Core 3. generacji");
+	    laptop_dell.setDescription("Dell Inspiron, 14-calowy laptop (czarny) z procesorami Intel Core 3. generacji");
 	    laptop_dell.setCategory("laptop");
 	    laptop_dell.setManufacturer("Dell");
 	    laptop_dell.setUnitsInStock(1000);
