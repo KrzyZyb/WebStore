@@ -8,20 +8,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-<title>Invalid cart</title>
+<title>Koszyk</title>
 </head>
 <body>
 	<section>
 		<div class="jumbotron">
 			<div class="container">
-				<h1 class="alert alert-danger">Thank you</h1>
+				<h1 class="alert alert-danger">Dziekujemy</h1>
 				<p>
-					Thanks for the order. your order will be delivered to you on
+					Dziekujemy za zamowienie. Twoje zamowienie zostanie zrealizowane
 					<fmt:formatDate type="date"
 						value="${order.shippingDetail.shippingDate}" />
 					!
 				</p>
-				<p>Your Order Number is ${order.orderId}</p>
+				<p>Twoj numer zamowienia to ${order.orderId}</p>
 			</div>
 		</div>
 	</section>
@@ -30,7 +30,7 @@
 		<div class="container">
 			<p>
 				<a href="<spring:url value="/products" />" class="btn btn-primary">
-					<span class="glyphicon-hand-left glyphicon"></span> products
+					<span class="glyphicon-hand-left glyphicon"></span> produkty
 				</a>
 			</p>
 		</div>

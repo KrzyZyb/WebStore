@@ -5,7 +5,7 @@
 	<action-state id="addCartToOrder">
 		<evaluate expression="cartServiceImpl.validate(requestParameters.cartId)"
 			result="order.cart" />
-		<transition to="InvalidCartWarning"
+		<transition to="invalidCartWarning"
 			on-exception="com.packt.webstore.exception.InvalidCartException" />
 		<transition to="collectCustomerInfo" />
 	</action-state>
@@ -26,14 +26,14 @@
 			result="order.orderId" />
 		<transition to="thankCustomer" />
 	</action-state>
-	<view-state id="InvalidCartWarning">
+	<view-state id="invalidCartWarning">
 		<transition to="endState" />
 	</view-state>
 	<view-state id="thankCustomer" model="order">
 		<transition to="endState" />
 	</view-state>
 	<end-state id="endState" />
-	<end-state id="cancelCheckout" view="checkOutCancelled.jsp" />
+	<end-state id="cancelCheckout" view="checkoutCancelled.jsp" />
 	<global-transitions>
 		<transition on="cancel" to="endState" />
 	</global-transitions>

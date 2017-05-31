@@ -6,13 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-<title>Invalid cart</title>
+<title>Zakup anulowany</title>
 </head>
 <body>
 	<section>
 		<div class="jumbotron">
 			<div class="container">
-				<h1 class="alert alert-danger">Invalid Cart</h1>
+				<h1 class="alert alert-danger">Zakup anulowany</h1>
 			</div>
 		</div>
 	</section>
@@ -21,7 +21,7 @@
 		<div class="container">
 			<p>
 				<a href="<spring:url value="/products" />" class="btn btn-primary">
-					<span class="glyphicon-hand-left glyphicon"></span> products
+					<span class="glyphicon-hand-left glyphicon"></span> produkty
 				</a>
 			</p>
 		</div>

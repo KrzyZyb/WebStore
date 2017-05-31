@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-<title>Order Confirmation</title>
+<title>Potwierdzenie zamowienia</title>
 </head>
 
 <body>
@@ -17,8 +17,8 @@
 	<section>
 		<div class="jumbotron">
 			<div class="container">
-				<h1>Order</h1>
-				<p>Order Confirmation</p>
+				<h1>Zamowienie</h1>
+				<p>Potwierdzenie zamowienia</p>
 			</div>
 		</div>
 	</section>
@@ -31,12 +31,12 @@
 				<div
 					class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
 					<div class="text-center">
-						<h1>Receipt</h1>
+						<h1>Dane</h1>
 					</div>
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-md-6">
 							<address>
-								<strong>Shipping Address</strong> <br>
+								<strong>Adres wysylki</strong> <br>
 								${order.shippingDetail.name}<br>
 								${order.shippingDetail.shippingAddress.doorNo},${order.shippingDetail.shippingAddress.streetName}
 								<br>
@@ -48,7 +48,7 @@
 						</div>
 						<div class="col-xs-6 col-sm-6 col-md-6 text-right">
 							<p>
-								<em>Shipping DateDate: <fmt:formatDate type="date"
+								<em>Adres dostawy: <fmt:formatDate type="date"
 										value="${order.shippingDetail.shippingDate}" /></em>
 							</p>
 						</div>
@@ -56,7 +56,7 @@
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-md-6">
 							<address>
-								<strong>Billing Address</strong> <br>
+								<strong>Adres zamawiajacego</strong> <br>
 								${order.customer.name}<br>
 								${order.customer.billingAddress.doorNo},${order.customer.billingAddress.streetName}
 								<br>
@@ -74,10 +74,10 @@
 						<table class="table table-hover">
 							<thead>
 								<tr>
-									<th>Product</th>
+									<th>Produkt</th>
 									<th>#</th>
-									<th class="text-center">Price</th>
-									<th class="text-center">Total</th>
+									<th class="text-center">Cena</th>
+									<th class="text-center">Razem</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -95,7 +95,7 @@
 									<td> </td>
 									<td> </td>
 									<td class="text-right"><h4>
-											<strong>Grand Total: </strong>
+											<strong>Razem: </strong>
 										</h4></td>
 									<td class="text-center text-danger"><h4>
 											<strong>$${order.cart.grandTotal}</strong>
@@ -104,14 +104,14 @@
 							</tbody>
 						</table>
 						<button id="back" class="btn btn-default"
-							name="_eventId_backToCollectShippingDetail">back</button>
+							name="_eventId_backToCollectShippingDetail">Wstecz</button>
 
 						<button type="submit" class="btn btn-success"
 							name="_eventId_orderConfirmed">
-							Confirm   <span class="glyphicon glyphicon-chevron-right"></span>
+							Zatwierdz   <span class="glyphicon glyphicon-chevron-right"></span>
 						</button>
 						<button id="btnCancel" class="btn btn-default"
-							name="_eventId_cancel">Cancel</button>
+							name="_eventId_cancel">Anuluj</button>
 					</div>
 				</div>
 			</form:form>
