@@ -3,9 +3,5 @@
 	<version>1</version>
 	<pluginVersion><![CDATA[3.8.3.201612191259-RELEASE]]></pluginVersion>
 	<configs>
-		<config>
-			<file>src/main/webapp/WEB-INF/flows/checkout/checkout-flow.xml</file>
-			<name><![CDATA[checkout-flow]]></name>
-		</config>
 	</configs>
 </webflow-project-description>
