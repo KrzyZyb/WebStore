@@ -13,11 +13,9 @@
 
 <title><tiles:insertAttribute name="title" /></title>
 
-<link href="http://getbootstrap.com/dist/css/bootstrap.css"
-	rel="stylesheet">
+<link href="http://getbootstrap.com/dist/css/bootstrap.css"	rel="stylesheet">
 
-<link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css"
-	rel="stylesheet">
+<link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css"	rel="stylesheet">
 
 </head>
 
@@ -28,7 +26,7 @@
 			<ul class="nav nav-pills pull-right">
 				<tiles:insertAttribute name="navigation" />
 			</ul>
-			<h3 class="text-muted">Sklep internetowy</h3>
+			<h3 class="text-muted">Sklep WebStore 1.0</h3>
 		</div>
 
 		<div class="jumbotron">

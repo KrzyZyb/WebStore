@@ -15,9 +15,13 @@ public class OrderServiceImpl implements OrderService{
 
 	@Autowired
 	private ProductRepository productRepository;
+	
 	@Autowired
 	private OrderRepository orderRepository;
-	@Autowired CartService cartService;
+	
+	@Autowired
+	private CartService cartService;
+
 	
 	public void processOrder(String productId, long quantity) {
 		Product productById = productRepository.getProductById(productId);
@@ -28,11 +32,11 @@ public class OrderServiceImpl implements OrderService{
 		
 		productById.setUnitsInStock(productById.getUnitsInStock() - quantity);
 	}
-
-	@Override
+	
 	public Long saveOrder(Order order) {
 		Long orderId = orderRepository.saveOrder(order);
 		cartService.delete(order.getCart().getCartId());
 		return orderId;
 	}
+
 }

@@ -2,19 +2,19 @@ package com.packt.webstore.domain;
 
 import java.io.Serializable;
 
-public class Customer implements Serializable {
+public class Customer implements Serializable{
 
 	private static final long serialVersionUID = 2284040482222162898L;
-
+	
 	private String customerId;
 	private String name;
 	private Address billingAddress;
 	private String phoneNumber;
-
+	
 	public Customer() {
 		this.billingAddress = new Address();
 	}
-
+	
 	public Customer(String customerId, String name) {
 		this();
 		this.customerId = customerId;
@@ -61,7 +61,8 @@ public class Customer implements Serializable {
 	public int hashCode() {
 		final int prime = 853;
 		int result = 1;
-		result = prime * result + ((customerId == null) ? 0 : customerId.hashCode());
+		result = prime * result
+				+ ((customerId == null) ? 0 : customerId.hashCode());
 		return result;
 	}
 
@@ -82,4 +83,5 @@ public class Customer implements Serializable {
 		return true;
 	}
 
+	
 }

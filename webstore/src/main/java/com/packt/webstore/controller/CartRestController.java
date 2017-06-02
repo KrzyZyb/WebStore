@@ -92,7 +92,7 @@ public class CartRestController {
 	}
 
 	@ExceptionHandler(IllegalArgumentException.class)
-	@ResponseStatus(value = HttpStatus.BAD_REQUEST,  reason="Niepoprawne øπdanie, sprawdü przesy≥ane dane.")
+	@ResponseStatus(value = HttpStatus.BAD_REQUEST,  reason="Niepoprawne øπdanie, sprawdü przesy≥ane dane")
 	public void handleClientErrors(Exception ex) { }
 
 	@ExceptionHandler(Exception.class)

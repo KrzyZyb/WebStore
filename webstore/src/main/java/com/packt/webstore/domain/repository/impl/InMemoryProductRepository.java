@@ -58,7 +58,7 @@ public class InMemoryProductRepository implements ProductRepository{
 		}
 		
 		if(productById == null){
-			throw new ProductNotFoundException(productId);
+			throw new ProductNotFoundException("Brak produktu o wskazanym id: "+ productId);
 		}
 		
 		return productById;
